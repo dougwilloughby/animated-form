@@ -1,0 +1,47 @@
+#rateQuoteFormContainer {
+    position: relative;
+    overflow: hidden;
+    font-family:  ‘Trebuchet MS’, Helvetica, sans-serif;
+}
+
+:focus {
+    background: purple;
+}
+
+#rateQuoteForm {
+    max-height: 58vh;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    z-index: 51;
+}
+
+.fadeout {
+    position: fixed;
+    top: 64vh;
+    width:100%;
+    height: 80px;
+    z-index: 50;
+    background-image: linear-gradient(to bottom, transparent, white);
+}
+
+.fadein {
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+    height: 80px;
+    z-index: 50;
+    background-image: linear-gradient(to bottom, white, transparent);
+}
+
+#currentStepStatus {
+    position: fixed;
+    z-index:  100;
+    top: 68vh;
+}
+
+#helpContainer {
+    height: 100%;
+    z-index: 51;
+    background-color: #e0e0e0;
+}
