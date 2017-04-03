@@ -17,12 +17,12 @@ class ArmOkay extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           Are you comfortable with an adjustable rate loan?
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style}}>
-          <RadioButtonGroup name="armOkay" defaultSelected={this.props.armOkay} style={{paddingTop: '2em'}} onChange={this.onChange.bind(this)}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+          <RadioButtonGroup name="armOkay" defaultSelected={this.props.armOkay} style={{paddingTop: '1em'}} onChange={this.onChange.bind(this)}>
             <RadioButton id={this.props.id}
                          value="yes"
                          label="Yes"

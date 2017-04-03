@@ -19,12 +19,12 @@ class RefinancePurpose extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           Why do you want to refinance?
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style}}>
-          <RadioButtonGroup name="refinancePurpose" defaultSelected={this.props.refinancePurpose} onChange={this.onChange.bind(this)} style={{paddingTop: '2em'}}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+          <RadioButtonGroup name="refinancePurpose" defaultSelected={this.props.refinancePurpose} onChange={this.onChange.bind(this)} style={{paddingTop: '1em'}}>
             <RadioButton id={this.props.id}
                          value="lowerPayments"
                          label="Lower mortgage rate or payments"

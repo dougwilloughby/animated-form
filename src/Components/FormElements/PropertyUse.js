@@ -16,12 +16,12 @@ class PropertyUse extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           This property will be used as a?
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style}}>
-          <RadioButtonGroup name="propertyUse" defaultSelected={this.props.propertyUse} style={{paddingTop: '2em'}} onChange={this.onChange.bind(this)} >
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+          <RadioButtonGroup name="propertyUse" defaultSelected={this.props.propertyUse} style={{paddingTop: '1em'}} onChange={this.onChange.bind(this)} >
             <RadioButton id={this.props.id}
                          value="primary"
                          label="Primary Home"

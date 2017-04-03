@@ -17,12 +17,12 @@ class LoanType extends Component {
     
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           What to you want to do?
         </div>
-        <div style={{display: 'flex', justifyContent: 'center', ...this.props.style}}>
-          <RadioButtonGroup name="loanType" defaultSelected={this.props.loanType} style={{paddingTop: '2em'}} onChange={this.onChange.bind(this)} >
+        <div style={{display: 'flex', justifyContent: 'center'}}>
+          <RadioButtonGroup name="loanType" defaultSelected={this.props.loanType} style={{paddingTop: '1em'}} onChange={this.onChange.bind(this)} >
             <RadioButton id={this.props.id}
                          value="purchase"
                           label="Purchase"  autoFocus={true} />

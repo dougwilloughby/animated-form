@@ -31,36 +31,36 @@ export default function animatedFormComponent(FormComponent)  {
 
 
     render() {
-
-      // The whole intent of the following is to scale elements up as they approach the middle
-      // of the container's visible contents.
+      //
+      // // The whole intent of the following is to scale elements up as they approach the middle
+      // // of the container's visible contents.
       let scale = 1;
-      let containerHeight, containerCenter = 0;
-      if (this.props.containerBottom && this.props.containerTopOffset) {
-        containerHeight = this.props.containerBottom - this.props.containerTopOffset;
-        containerCenter = (containerHeight / 2 ) + this.props.containerTopOffset;
-      }
-      
-      if (this.divRef !== null) {
-        let elementBounds = this.divRef.getBoundingClientRect();
-        let elementCenter = (elementBounds.height / 2) + elementBounds.top;
-        let percentToMiddle = Math.abs((containerCenter - elementCenter)) / (containerHeight / 2);
-        scale = 1.25 - percentToMiddle;
-        if (scale < 1) scale = 1;
-      }
+      // let containerHeight, containerCenter = 0;
+      // if (this.props.containerBottom && this.props.containerTopOffset) {
+      //   containerHeight = this.props.containerBottom - this.props.containerTopOffset;
+      //   containerCenter = (containerHeight / 2 ) + this.props.containerTopOffset;
+      // }
+      //
+      // if (this.divRef !== null) {
+      //   let elementBounds = this.divRef.getBoundingClientRect();
+      //   let elementCenter = (elementBounds.height / 2) + elementBounds.top;
+      //   let percentToMiddle = Math.abs((containerCenter - elementCenter)) / (containerHeight / 2);
+      //   scale = 1.25 - percentToMiddle;
+      //   if (scale < 1) scale = 1;
+      // }
 
       let scaleStr =  "scale("+ scale + "," + scale + ")";
 
 
       if (this.props.hide) return null;
 
-      const { style, ...passThroughProps } = this.props;
+      const { ...passThroughProps } = this.props;
       return(
-        <div style={{textAlign: 'center', paddingTop: '10%', paddingBottom: '30%'}}>
-          <div ref={(divRef) => {this.divRef = divRef;}} onFocus={this.onFocus.bind(this)} onBlur={this.onBlur.bind(this)()}>
-            <FormComponent style={{...style, transform: scaleStr}} {...passThroughProps}/>
-          </div>
-        </div>
+      //   <div style={{textAlign: 'center', paddingTop: '10%', paddingBottom: '30%'}}>
+      //     <div ref={(divRef) => {this.divRef = divRef;}} onFocus={this.onFocus.bind(this)} onBlur={this.onBlur.bind(this)()}>
+            <FormComponent {...passThroughProps}/>
+        //   </div>
+        // </div>
       )
     }
   }
@@ -71,7 +71,7 @@ export default function animatedFormComponent(FormComponent)  {
     });
   }
 
-  return connect(mapStateToProps)(animatedFormComponent);
+  return connect(mapStateToProps)(AnimationWrapper);
 
 };
 

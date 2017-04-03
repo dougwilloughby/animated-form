@@ -82,12 +82,12 @@ class CurrentMortgageBalance extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           What is your current mortgage balance?
         </div>
 
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <TextField id={this.props.id}
                      hintText="Amount"
                      errorText={this.state.propertyAmountErrorMsg}
@@ -97,7 +97,7 @@ class CurrentMortgageBalance extends Component {
                      onBlur={this.blurCurrentMortgageBalance}
           />
         </div>
-        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <CmmRaisedButton
                         label="Next"
                            primary={true}

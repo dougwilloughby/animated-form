@@ -14,10 +14,12 @@ class GetRates extends Component {
   render() {
 
     return (
+      <div style={{...this.props.style}}>
           <CmmRaisedButton className="col-sm-offset-5 col-sm-2"
                         label="Get Rates"
                            primary={true}
                         onClick={this.props.onNext}/>
+      </div>
            )
   };
 }

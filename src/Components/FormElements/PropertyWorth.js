@@ -82,14 +82,14 @@ class PropertyWorth extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           What is your property worth?
         </div>
-        <div style={{fontSize: '20px', fontStyle: 'italic', ...this.props.style}}>
+        <div style={{fontSize: '20px', fontStyle: 'italic'}}>
           Your best guess is okay
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <TextField id={this.props.id}
                      hintText="Property Worth"
                      errorText={this.state.propertyAmountErrorMsg}
@@ -99,7 +99,7 @@ class PropertyWorth extends Component {
                      onBlur={this.blurPropertyWorth}
           />
         </div>
-        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <CmmRaisedButton
                         label="Next"
                            primary={true}

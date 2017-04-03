@@ -82,11 +82,11 @@ class CashOutAmount extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           How much cash would you like to take out?
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <TextField id={this.props.id}
                      hintText="Amount"
                      errorText={this.state.cashOutAmountErrorMsg}

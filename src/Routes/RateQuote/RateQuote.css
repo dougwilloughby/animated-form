@@ -4,10 +4,6 @@
     font-family:  ‘Trebuchet MS’, Helvetica, sans-serif;
 }
 
-:focus {
-    background: purple;
-}
-
 #rateQuoteForm {
     max-height: 58vh;
     text-align: center;

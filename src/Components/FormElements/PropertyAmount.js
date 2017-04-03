@@ -85,14 +85,14 @@ class PropertyAmount extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           How much do you expect to pay for this property?
         </div>
-        <div style={{fontSize: '20px', fontStyle: 'italic', ...this.props.style}}>
+        <div style={{fontSize: '20px', fontStyle: 'italic'}}>
           Your best guess is okay
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <TextField id={this.props.id}
                      hintText="Property Amount"
                      errorText={this.state.propertyAmountErrorMsg}
@@ -101,7 +101,7 @@ class PropertyAmount extends Component {
                      onChange={this.onPropertyAmountChange}
                      onBlur={this.blurPropertyAmount} />
         </div>
-        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <CmmRaisedButton
                         label="Next"
                            primary={true}

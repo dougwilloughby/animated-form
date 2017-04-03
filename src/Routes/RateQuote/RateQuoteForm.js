@@ -192,83 +192,80 @@ class RateQuoteForm extends Component {
     let loanLocationEntered = this.props.rateQuoteForm.loanLocationValid;
 
     return (
-      <div style={{display: 'flex', flexDirection: 'row', flexWrap: 'nowrap', alignItems: 'stretch', width: '100%'}}>
-        <AnimatedForm maxFieldsShown={3} id='rateQuoteForm' style={{flexGrow: 1, minWidth: '80%'}}>
+      <div style={{display: 'flex', flexDirection: 'column', flexWrap: 'nowrap', alignItems: 'stretch', width: '100%'}}>
+
             <LoanLocation id='loanLocation'
                           zipCode={this.props.rateQuoteForm.loanLocation.zipCode}
                           state={this.props.rateQuoteForm.loanLocation.state}
                           county={this.props.rateQuoteForm.loanLocation.county}
                           onNext={this.onLoanLocationComplete.bind(this)}/>
 
-            <LoanType id="loanType"
+            <LoanType class='xItem' id="loanType" style={{textAlign: 'center', paddingTop: '40px'}}
                       loanType={this.props.rateQuoteForm.loanType}
                       hide={!loanLocationEntered}
                       onNext={this.onLoanTypeComplete.bind(this)}/>
 
-            <RefinancePurpose id="refinancePurpose"
+            <RefinancePurpose id="refinancePurpose" style={{textAlign: 'center', paddingTop: '40px'}}
                               refinancePurpose={this.props.rateQuoteForm.refinancePurpose}
                               hide={!(loanLocationEntered && this.props.rateQuoteForm.loanType === 'refinance')}
                               onNext={this.onRefinancePurposeSelected.bind(this)}/>
-            <CashOutAmount id="cashOutAmount"
+            <CashOutAmount id="cashOutAmount" style={{textAlign: 'center', paddingTop: '40px'}}
                            cashOutAmount={this.props.rateQuoteForm.cashOutAmount}
                            hide={!(loanLocationEntered && this.props.rateQuoteForm.loanType === 'refinance' && this.props.rateQuoteForm.refinancePurpose === "cashOut")}
                            onNext={this.onCashOutAmountComplete.bind(this)}/>
-            <PropertyType id="propertyType"
-                          propertyAmount={this.props.rateQuoteForm.propertyType}
-                          hide={!loanLocationEntered}
-                          onNext={this.onPropertyTypeComplete.bind(this)}/>
-            <PropertyUse id="propertyUse"
+        
+        <PropertyType id="propertyType" style={{textAlign: 'center', paddingTop: '40px'}}
+                      propertyAmount={this.props.rateQuoteForm.propertyType}
+                      hide={!loanLocationEntered}
+                      onNext={this.onPropertyTypeComplete.bind(this)}/>
+
+            <PropertyUse id="propertyUse" style={{textAlign: 'center', paddingTop: '40px'}}
                          propertyUse={this.props.rateQuoteForm.propertyUse}
                          hide={!loanLocationEntered}
                          onNext={this.onPropertyUseComplete.bind(this)}/>
 
-            <ExpectedOwnership id="expectedOwnership"
+            <ExpectedOwnership id="expectedOwnership"  style={{textAlign: 'center', paddingTop: '40px'}}
                                expectedOwnership={this.props.rateQuoteForm.expectedOwnership}
                                hide={!loanLocationEntered}
                                onNext={this.onExpectedOwnershipComplete.bind(this)}/>
 
-            <ArmOkay id="armOkay"
+            <ArmOkay id="armOkay" style={{textAlign: 'center', paddingTop: '40px'}}
                      armOkay={this.props.rateQuoteForm.armOkay}
                      hide={!loanLocationEntered}
                      onNext={this.onArmOkayComplete.bind(this)}/>
 
-            <MilitaryService id="militaryService"
+            <MilitaryService id="militaryService" style={{textAlign: 'center', paddingTop: '40px'}}
                              militaryService={this.props.rateQuoteForm.militaryService}
                              hide={!loanLocationEntered}
                              onNext={this.onMilitaryServiceComplete.bind(this)}/>
 
-            <PropertyWorth id="propertyWorth"
+            <PropertyWorth id="propertyWorth" style={{textAlign: 'center', paddingTop: '40px'}}
                            propertyWorth={this.props.rateQuoteForm.propertyWorth}
                            hide={!(loanLocationEntered && this.props.rateQuoteForm.loanType === 'refinance')}
                            onNext={this.onPropertyWorthCompleted.bind(this)}/>
 
-            <CurrentMortgageBalance id="currentMortgageBalance"
+            <CurrentMortgageBalance id="currentMortgageBalance" style={{textAlign: 'center', paddingTop: '40px'}}
                                     currentMortgageBalance={this.props.rateQuoteForm.currentMortgageBalance}
                                     hide={!(loanLocationEntered && this.props.rateQuoteForm.loanType === 'refinance')}
                                     onNext={this.onCurrentMortgageBalanceCompleted.bind(this)}/>
 
-            <PropertyAmount id="propertyAmount"
+            <PropertyAmount id="propertyAmount"  style={{textAlign: 'center', paddingTop: '40px'}}
                             propertyAmount={this.props.rateQuoteForm.propertyAmount}
                             hide={!(loanLocationEntered && this.props.rateQuoteForm.loanType === 'purchase')}
                             onNext={this.onPropertyAmountComplete.bind(this)}/>
 
-            <DownPaymentAmount id="downPaymentAmount"
+            <DownPaymentAmount id="downPaymentAmount" style={{textAlign: 'center', paddingTop: '40px'}}
                                downPaymentAmount={this.props.rateQuoteForm.downPaymentAmount}
                                hide={!(loanLocationEntered && this.props.rateQuoteForm.loanType === 'purchase')}
                                onNext={this.onDownPaymentAmountComplete.bind(this)}/>
 
-            <CreditScoreGuess id="creditScoreGuess"
+            <CreditScoreGuess id="creditScoreGuess" style={{textAlign: 'center', paddingTop: '40px'}}
                               creditScoreGuess={this.props.creditScoreGuess}
                               hide={!loanLocationEntered}
                               onNext={this.onCreditScoreGuessComplete.bind(this)}/>
 
-            <GetRates id='getRates' hide={!loanLocationEntered}/>
+            <GetRates id='getRates' style={{textAlign: 'center', paddingTop: '80px', paddingBottom: '40px'}} hide={!loanLocationEntered}/>
 
-
-        </AnimatedForm>
-          <div style={{flex: 1}}>
-            Help goes here
-          </div>
       </div>
     );
   }

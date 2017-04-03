@@ -81,14 +81,14 @@ class DownPaymentAmount extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           How much do you expect to put down?
         </div>
-        <div style={{fontSize: '20px', fontStyle: 'italic', ...this.props.style}}>
+        <div style={{fontSize: '20px', fontStyle: 'italic'}}>
           Your best guess is okay
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <TextField id={this.props.id}
                      hintText="Down Payment Amount"
                      errorText={this.state.downPaymentAmountErrorMsg}
@@ -98,7 +98,7 @@ class DownPaymentAmount extends Component {
                      onBlur={this.blurDownPaymentAmount}
           />
         </div>
-        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style }}>
+        <div style={{paddingTop: '40px', display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
           <CmmRaisedButton
                         label="Next"
                            primary={true}

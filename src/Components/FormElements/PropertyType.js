@@ -17,12 +17,12 @@ class PropertyType extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           What type of property is it?
         </div>
-        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center', ...this.props.style}}>
-          <RadioButtonGroup  id={this.props.id} name="loanType" defaultSelected={this.props.propertyType} style={{paddingTop: '2em'}} onChange={this.onChange.bind(this)} >
+        <div style={{display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+          <RadioButtonGroup  id={this.props.id} name="loanType" defaultSelected={this.props.propertyType} style={{paddingTop: '1em'}} onChange={this.onChange.bind(this)} >
             <RadioButton id={this.props.id}
                          value="singleFamily"
                          label="Single Family"

@@ -44,14 +44,14 @@ class CreditScoreGuess extends Component {
 
     return (
 
-      <div>
-        <div style={{fontSize: '28px', ...this.props.style}}>
+      <div style={{...this.props.style}}>
+        <div style={{fontSize: '28px'}}>
           What is your approximate credit score?
         </div>
-        <div style={{fontSize: '20px', fontStyle: 'italic', ...this.props.style}} >
+        <div style={{fontSize: '20px', fontStyle: 'italic'}} >
           Your best guess is okay
         </div>
-        <div style={{width: '80%', marginLeft: '10%', paddingTop: '2em', paddingBottom: 0, marginBottom: 0}}>
+        <div style={{width: '80%', marginLeft: '10%', paddingTop: '1em', paddingBottom: 0, marginBottom: 0}}>
           <Slider id={this.props.id}
                   sliderStyle={{width: '100%', paddingBottom: 0, marginBottom: 0}}
                   min={500}

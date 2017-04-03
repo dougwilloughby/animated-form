@@ -72,7 +72,7 @@ class LoanLocation extends Component {
 
     return (
 
-      <div  style={{textAlign: 'center', paddingTop: '30%', paddingBottom: '10%'}}>
+      <div  style={{textAlign: 'center', paddingTop: '30%'}}>
         <div style={{fontSize: '28px'}}>
           Where are you looking to get a loan?
         </div>
